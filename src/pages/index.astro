@@ -1,15 +1,13 @@
 ---
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Tutorial Astro</h1>
-  </body>
-</html>
+<Layout title="Inicio">
+  <h1>Página de inicio</h1>
+</Layout>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
