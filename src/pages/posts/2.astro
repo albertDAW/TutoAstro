@@ -19,7 +19,7 @@ import ia3 from "../../assets/3.webp";
       muchos aspectos.
     </p>
     <section>
-      <Image class="image" src={ia1} alt="Una imagen de IA" loading={"lazy"}/>
+      <Image class="image" src={ia1} alt="Una imagen de IA" loading={"lazy"} />
     </section>
     <p>
       Uno de los principales beneficios de la IA en la educación es su capacidad
@@ -39,7 +39,7 @@ import ia3 from "../../assets/3.webp";
       de la enseñanza.
     </p>
     <section>
-      <Image class="image" src={ia2} alt="Otra imagen de IA" loading={"lazy"}/>
+      <Image class="image" src={ia2} alt="Otra imagen de IA" loading={"lazy"} />
     </section>
     <p>
       En la investigación académica, la IA ha demostrado ser una aliada
@@ -49,15 +49,15 @@ import ia3 from "../../assets/3.webp";
       avance en campos como la medicina, la biología y la física.
     </p>
     <p>
-        Además, la IA ha simplificado la gestión administrativa en instituciones
-        educativas. Desde la automatización de tareas de registro hasta la
-        optimización de horarios y recursos, la IA ha liberado tiempo y recursos
-        valiosos para que las instituciones académicas se enfoquen en la calidad
-        de la enseñanza.
-      </p>
-      <section>
-        <Image class="image" src={ia2} alt="Otra imagen de IA" loading={"lazy"} />
-      </section>
+      Además, la IA ha simplificado la gestión administrativa en instituciones
+      educativas. Desde la automatización de tareas de registro hasta la
+      optimización de horarios y recursos, la IA ha liberado tiempo y recursos
+      valiosos para que las instituciones académicas se enfoquen en la calidad
+      de la enseñanza.
+    </p>
+    <section>
+      <Image class="image" src={ia2} alt="Otra imagen de IA" loading={"lazy"} />
+    </section>
   </section>
   <section>
     <h2>Somos buenísimos</h2>
@@ -75,7 +75,12 @@ import ia3 from "../../assets/3.webp";
       todos.
     </p>
     <section>
-      <Image class="image" src={ia3} alt="Última imagen de IA" loading={"lazy"}/>
+      <Image
+        class="image"
+        src={ia3}
+        alt="Última imagen de IA"
+        loading={"lazy"}
+      />
     </section>
     <p>
       En resumen, la IA está transformando la educación y la investigación
@@ -108,23 +113,11 @@ import ia3 from "../../assets/3.webp";
 
   h2 {
     background-color: rgb(115, 115, 227);
-    view-timeline: --h2;
-    animation-name: sticky;
-    animation-timeline: --h2;
-    /* animation-range: entry 20% cover 100%; */
-    animation-fill-mode: both;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
-  @keyframes sticky {
-    from {
-      position: static;
-    }
-    to {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
-  }
 
   @keyframes show {
     from {
