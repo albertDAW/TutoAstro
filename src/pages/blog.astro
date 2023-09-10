@@ -1,7 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+let hidden = false;
 ---
 
 <Layout title="Blog">
-    <h1>Mi blog de cosas</h1>
+  <h1>Mi blog de cosas</h1>
+  <p>Aquí es donde voy a post sobre mi viaje de aprendizaje Astro.</p>
+  {
+    !hidden && (
+      <ul>
+        <li>
+          <a href="/posts/1/">Post 1</a>
+        </li>
+        <li>
+          <a href="/posts/2/">Post IA</a>
+        </li>
+      </ul>
+    )
+  }
 </Layout>

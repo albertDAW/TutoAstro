@@ -39,6 +39,7 @@ const { title } = Astro.props;
         background: #13151a;
         background-size: 224px;
         color-scheme: dark light;
+        min-height: 100%;
       }
       code {
         font-family:
@@ -50,6 +51,16 @@ const { title } = Astro.props;
           Bitstream Vera Sans Mono,
           Courier New,
           monospace;
+      }
+      body {
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 10px;
+        border: solid white;
+        border-width: 0px 1px 0px 1px;
+        min-height: calc(100vh - 20px);
       }
       h1 {
         text-align: center;

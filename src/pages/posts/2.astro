@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ia1 from "../../assets/1.webp";
+import ia2 from "../../assets/2.jpg";
+import ia3 from "../../assets/3.webp";
+---
+
+<Layout title="IA-Academico">
+  <h1>La IA en ambito academico</h1>
+
+  <section>
+    <h2>Subtitulo</h2>
+    <p>
+      La Inteligencia Artificial (IA) ha emergido como una poderosa herramienta
+      en el ámbito académico, transformando la forma en que educadores,
+      estudiantes y administradores interactúan con la información y el
+      aprendizaje. En este contexto, la IA ha revolucionado la educación en
+      muchos aspectos.
+    </p>
+    <section>
+      <Image class="image" src={ia1} alt="Una imagen de IA" />
+    </section>
+    <p>
+      Uno de los principales beneficios de la IA en la educación es su capacidad
+      para personalizar el proceso de aprendizaje. Los sistemas de IA pueden
+      analizar el rendimiento y las preferencias de los estudiantes para adaptar
+      los contenidos y las actividades a sus necesidades específicas, lo que
+      lleva a un aprendizaje más eficiente y efectivo.
+    </p>
+  </section>
+  <section>
+    <h2>Otro texto</h2>
+    <p>
+      Además, la IA ha simplificado la gestión administrativa en instituciones
+      educativas. Desde la automatización de tareas de registro hasta la
+      optimización de horarios y recursos, la IA ha liberado tiempo y recursos
+      valiosos para que las instituciones académicas se enfoquen en la calidad
+      de la enseñanza.
+    </p>
+    <section>
+      <Image class="image" src={ia2} alt="Otra imagen de IA" />
+    </section>
+    <p>
+      En la investigación académica, la IA ha demostrado ser una aliada
+      invaluable. Los algoritmos de IA pueden analizar grandes cantidades de
+      datos y ayudar a los investigadores a identificar patrones y tendencias
+      que serían difíciles de detectar de forma manual. Esto ha acelerado el
+      avance en campos como la medicina, la biología y la física.
+    </p>
+    <p>
+        Además, la IA ha simplificado la gestión administrativa en instituciones
+        educativas. Desde la automatización de tareas de registro hasta la
+        optimización de horarios y recursos, la IA ha liberado tiempo y recursos
+        valiosos para que las instituciones académicas se enfoquen en la calidad
+        de la enseñanza.
+      </p>
+      <section>
+        <Image class="image" src={ia2} alt="Otra imagen de IA" />
+      </section>
+  </section>
+  <section>
+    <h2>Somos buenísimos</h2>
+    <p>
+      No podemos dejar de mencionar el impacto de la IA en la educación a
+      distancia y en línea. La IA permite la creación de sistemas de tutoría
+      virtual, chatbots educativos y plataformas de aprendizaje adaptativo que
+      hacen que la educación sea accesible para un público global.
+    </p>
+    <p>
+      Sin embargo, la implementación de la IA en el ámbito académico no está
+      exenta de desafíos éticos y sociales. Es fundamental abordar cuestiones
+      relacionadas con la privacidad de los datos, la equidad en el acceso y la
+      transparencia en los algoritmos para garantizar que la IA beneficie a
+      todos.
+    </p>
+    <section>
+      <Image class="image" src={ia3} alt="Última imagen de IA" />
+    </section>
+    <p>
+      En resumen, la IA está transformando la educación y la investigación
+      académica en formas asombrosas. A medida que continuamos explorando las
+      posibilidades de esta tecnología, es esencial encontrar un equilibrio
+      entre la automatización y la humanización del proceso educativo para crear
+      un futuro académico más prometedor y equitativo.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  p {
+    text-align: justify;
+  }
+  section {
+    text-align: center;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+    view-timeline: --image;
+    view-timeline-axis: block;
+
+    animation-name: show;
+    animation-timeline: --image;
+    animation-range: entry 25% cover 70%;
+    animation-fill-mode: both;
+  }
+
+  h2 {
+    background-color: blue;
+    view-timeline: --h2;
+    animation-name: sticky;
+    animation-timeline: --h2;
+    /* animation-range: entry 20% cover 100%; */
+    animation-fill-mode: both;
+  }
+
+  @keyframes sticky {
+    from {
+      position: static;
+    }
+    to {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 40%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+</style>
