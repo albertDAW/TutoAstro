@@ -1,12 +1,15 @@
 ---
-
+import Counter from "../components/Counter";
 ---
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/about">Sobre nosotros</a>
-  <a href="/blog">El blog</a>
-</nav>
+<div transition:persist>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">Sobre nosotros</a>
+    <a href="/blog">El blog</a>
+  </nav>
+  <Counter client:visible />
+</div>
 
 <style>
   nav {
@@ -24,7 +27,7 @@
     border: 1px solid rgba(239, 225, 225, 0.618);
     border-radius: 12px;
     &:hover {
-      background-color:#9dd4c482;
+      background-color: #9dd4c482;
     }
   }
 </style>
