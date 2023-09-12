@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BlogList from "../components/BlogList";
+const visible = true;
 ---
 
 <Layout title="Blog">
   <h1>Mi blog de cosas</h1>
   <p>Aquí es donde voy a post sobre mi viaje de aprendizaje Astro.</p>
-  <BlogList client:visible/>
+  <BlogList client:visible defaultVisibility={visible} />
 </Layout>

@@ -1,7 +1,7 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState, type FC } from 'react';
 
-const BlogList = () => {
-    const [visible, setVisible] = useState(false);
+const BlogList: FC<{ defaultVisibility?: boolean }> = ({ defaultVisibility }) => {
+    const [visible, setVisible] = useState(defaultVisibility ?? false);
 
     const handleChangeVisibility = useCallback(() => {
         setVisible((visible) => !visible)
