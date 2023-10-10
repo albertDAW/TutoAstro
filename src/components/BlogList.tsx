@@ -3,6 +3,7 @@ import { useCallback, useState, type FC } from 'react';
 const BlogList: FC<{ defaultVisibility?: boolean }> = ({ defaultVisibility }) => {
     const [visible, setVisible] = useState(defaultVisibility ?? false);
 
+    const rtf = new Intl.RelativeTimeFormat('es', { numeric: 'auto' });
     const handleChangeVisibility = useCallback(() => {
         setVisible((visible) => !visible)
     }, [])
@@ -13,10 +14,13 @@ const BlogList: FC<{ defaultVisibility?: boolean }> = ({ defaultVisibility }) =>
             visible ?
                 <ul>
                     <li>
-                        <a href="/posts/1/">Post 1</a>
+                        <a href="/posts/1/">Post 1. {rtf.format(-21, 'day',)}</a>
                     </li>
                     <li>
-                        <a href="/posts/2/">Post IA</a>
+                        <a href="/posts/2/">Post IA. {rtf.format(-22, 'day')}</a>
+                    </li>
+                    <li>
+                        <a href="/posts/3/">Chat. {rtf.format(0, 'day')}</a>
                     </li>
                 </ul>
                 :

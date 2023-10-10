@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ia1 from "../assets/1.webp";
+import ia2 from "../assets/2.jpg";
+import ia3 from "../assets/3.webp";
+---
+
+<Layout title="Slider">
+  <h1>Slider</h1>
+  <section class="slider">
+    <Image class="image" src={ia1} alt="Una imagen de IA" loading={"lazy"} />
+    <Image class="image" src={ia2} alt="Una imagen de IA" loading={"lazy"} />
+    <Image class="image" src={ia3} alt="Una imagen de IA" loading={"lazy"} />
+  </section>
+</Layout>
+
+<style>
+  .slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 16/9;
+    scroll-snap-type: x mandatory;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .slider img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    scroll-snap-align: center;
+    position: sticky;
+  }
+</style>
